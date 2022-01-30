@@ -85,34 +85,35 @@ public class GameController {
         char input;
         switch (input = scanner.nextLine().charAt(0)) {
             case 'a':
-                if (snake.x - 1 < 0) {
-                    snake.x = gameScreen.screenSize;
+                if (snake.x <= 0) {
+                    snake.x = gameScreen.screenSize - 1;
                 } else {
                     snake.x = snake.x - 1;
                 }
                 break;
             case 'd':
 
-                if (snake.x + 1 > gameScreen.screenSize) {
+                if (snake.x >= gameScreen.screenSize - 1) {
                     snake.x = 0;
                 } else {
                     snake.x = snake.x + 1;
                 }
                 break;
             case 'w':
-                if (snake.y - 1 < 0) {
-                    snake.y = gameScreen.screenSize;
+                if (snake.y <= 0) {
+                    snake.y = gameScreen.screenSize - 1;
                 } else {
                     snake.y = snake.y - 1;
                 }
                 break;
             case 's':
 
-                if (snake.y + 1 > gameScreen.screenSize) {
+                if (snake.y >= gameScreen.screenSize - 1) {
                     snake.y = 0;
                 } else {
                     snake.y = snake.y + 1;
                 }
+
                 break;
 
         }
