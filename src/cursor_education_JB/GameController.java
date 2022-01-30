@@ -41,7 +41,7 @@ public class GameController {
 
     private void mainLoop() {
 
-        // main loop
+
         while (true) {
             refreshScreen();
             userInput();
@@ -91,14 +91,15 @@ public class GameController {
                     snake.x = snake.x - 1;
                 }
                 break;
-            case 'd':
 
+            case 'd':
                 if (snake.x >= gameScreen.screenSize - 1) {
                     snake.x = 0;
                 } else {
                     snake.x = snake.x + 1;
                 }
                 break;
+
             case 'w':
                 if (snake.y <= 0) {
                     snake.y = gameScreen.screenSize - 1;
@@ -106,14 +107,13 @@ public class GameController {
                     snake.y = snake.y - 1;
                 }
                 break;
-            case 's':
 
+            case 's':
                 if (snake.y >= gameScreen.screenSize - 1) {
                     snake.y = 0;
                 } else {
                     snake.y = snake.y + 1;
                 }
-
                 break;
 
         }

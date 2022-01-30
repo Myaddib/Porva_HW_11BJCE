@@ -3,8 +3,8 @@ package cursor_education_JB;
 import cursor_education_JB.gameobjects.ObjectOnScreen;
 
 public class GameScreen {
-    int screenSize = 10;
-    char emptyCell = '*';
+    int screenSize = 15;
+    char emptyCell = 176;
     char[][] screen = new char[screenSize][screenSize];
     private ObjectOnScreen o;
 
